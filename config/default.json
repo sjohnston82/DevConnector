@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://mossy82:GateRust1@devconnector.gqpbh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken",
-  "githubClientId": "9df9067497f5b05fea0e", 
-  "githubSecret": "82459f43f110a65277d3ff41c44c19477a91ba1e"
-}
