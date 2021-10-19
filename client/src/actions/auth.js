@@ -97,6 +97,13 @@ export const login = (email, password) => async (dispatch) => {
     dispatch({
       type: LOGIN_FAIL,
     });
+
+    dispatch(
+      setAlert(
+        "The username and password combination are incorrect.  Please try again.",
+        "danger"
+      )
+    );
   }
 };
 

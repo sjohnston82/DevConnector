@@ -4,6 +4,21 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 
+// const initialState = {
+//   company: '',
+//   website: '',
+//   location: '',
+//   status: '',
+//   skills: '',
+//   githubusername: '',
+//   bio: '',
+//   twitter: '',
+//   facebook: '',
+//   linkedin: '',
+//   youtube: '',
+//   instagram: ''
+// };
+
 const EditProfile = ({
   profile: { profile, loading },
   createProfile,
@@ -45,7 +60,17 @@ const EditProfile = ({
       youtube: loading || !profile.social ? "" : profile.social.youtube,
       instagram: loading || !profile.social ? "" : profile.social.instagram,
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
+
+  //   if (!profile) getCurrentProfile();
+  //   if (!loading) {
+  //     const profileData = { ...initialState };
+  //     for (const key in profile) {
+  //       if (key in profileData) profileData[key] = profile[key];
+  //     }
+  //     setFormData(profileData);
+  //   }
+  // }, [loading, getCurrentProfile, profile]);
 
   const {
     company,
